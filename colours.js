@@ -1,6 +1,8 @@
 class HEX {
   constructor(input) {
-    if (input.constructor.name == "String") {
+    if (input.constructor.name == "HEX") {
+    	this.value = input.value
+    } else if (input.constructor.name == "String") {
       this.value = input
     } else if (input.constructor.name == "RGBA") {
       this.value = "#" + Math.round(input.r).toString(16).padStart(2, "0") + Math.round(input.g).toString(16).padStart(2, "0") + Math.round(input.b).toString(16).padStart(2, "0") + Math.round((input.a || 1) * 255).toString(16).padStart(2, "0")
@@ -12,7 +14,9 @@ class HEX {
 
 class RGBA {  
   constructor(r, g, b, a) {
-  	if (r.constructor.name == "Number") {
+  	if (r.constructor.name == "RGBA") {
+    	this.r = r.r, this.g = r.g, this.b = r.b, this.a = r.a || 1
+    } else if (r.constructor.name == "Number") {
     	this.r = r, this.g = g, this.b = b, this.a = a || 1
     } else if (r.constructor.name == "HEX") {
       let hex = r.value.replace("#", "").replace("0x", "")
@@ -41,7 +45,9 @@ class RGBA {
 
 class HSLA {
   constructor(h, s, l, a = 1) {
-    if (h.constructor.name == "Number") {
+    if (h.constructor.name == "HSLA") {
+    	this.h = h.h, this.s = h.s, this.l = h.l, this.a = h.a || 1
+    } else if (h.constructor.name == "Number") {
     	this.h = h, this.s = s, this.l = l, this.a = a || 1
     } else if (h.constructor.name == "RGBA" || h.constructor.name == "HEX") {
       if (h.constructor.name == "HEX") h = new RGBA(h)
