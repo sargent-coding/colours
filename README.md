@@ -1,58 +1,37 @@
-# Sargent Coding Icons
-These icons were originally created for Sargent Coding projects, but they're open for everyone to use now.
+# Sargent Coding Colours
+You can use the library via JSDelivr at https://cdn.jsdelivr.net/gh/sargent-coding/colours/colours.js
 
-You can use the library via JSDelivr at https://cdn.jsdelivr.net/gh/sargent-coding/icons/icons.js
+## Types of colours
+There are 3 supported colour types: `HEX`, `RGBA` and `HSLA`.
+
+### Hex colours
+When making a hex colour, you can add the prefixes `#` or `0x`, but hex prefixes aren't necessary. Hex colours can also be 3, 4, 6 or 8 digits long (not including the prefix).
+
+### RGBA and HSLA colours
+When making a RGBA or HSLA colour, you should note that the alpha (transparency) parameter isn't necessary.
 
 ## How to use
-The icons library has three ways of adding icons:
-
-<sup>**Quick note:** Icons like `caret.right` and `font.family` are nested. These can be used as names too: `new Icon("caret.right")`</sup>
-
-### Inline icons
-You can add an inline icon in an HTML by placing something like:
-```html
-<saco-icon name="pencil"></saco-icon>
+### Making a colour
+You can make a colour by using the `new` keyboard:
+```js
+new HEX("0x17f")
 ```
 
-### Adding icons via Javascript
-You also have ***two*** methods of adding icons using Javascript:
-
-#### The `new` keyword
-It's simpler to use the `new` keyword to make icons:
-```javascript
-let myNewIcon = new Icon("pencil");
-document.body.append(myNameIcon);
+### Getting the CSS value of a colour
+Getting the CSS value of a colour is really easy because every colour has a value getter property.
+```js
+new HSLA(214, 100, 53) // Returns hsla(214, 100, 53, 1)
 ```
 
-#### The `document.createElement()` method
-But, you can also create an element and set its `name` attribute:
-```javascript
-let myNewIcon = document.createElement("saco-icon");
-myNewIcon.setAttribute("name", "pencil");
-document.body.append(newNewIcon);
+### Converting colours
+You can convert colours by making a new colour with the old colour as the parameter. The colour classes are smart and can differentiate colours (1 parameter) from the typical parameters.
+```js
+new RGBA(new HEX("#1177ff")).value // Returns rgba(17, 119, 255, 1)
 ```
-
-### Changing an icon
-Changing an icon is really easy-- and you also have two ways to do it:
-
-#### Setting the `name` property
-You can set the `name` property to something else:
-```javascript
-myNewIcon.name = "javascript";
-```
-
-#### Settings the `name` attribute
-or you can also use `Element.setAttribute()`:
-```javascript
-myNewIcon.setAttribute("name", "javascript");
-```
-
-### Changing the colours of an icon
-Colours automatically change to the font colour using the really cool `currentColor` keyword!
 
 ## Credits
-###### All icons were designed by @aetinx.
+###### Made by @aetinx.
 
-###### [Sargent Coding Icons](https://github.com/sargent-coding/icons/) by [Sargent Coding](https://saco.ml) is licensed under [CC BY-ND 4.0](http://creativecommons.org/licenses/by-nd/4.0/)
+###### [Sargent Coding Colours](https://github.com/sargent-coding/colours/) by [Sargent Coding](https://saco.ml) is licensed under [CC BY-ND 4.0](http://creativecommons.org/licenses/by-nd/4.0/)
 
 ![image](https://user-images.githubusercontent.com/65425469/164231828-a7803d92-4b53-484f-8828-038b1af5bf6b.png)
