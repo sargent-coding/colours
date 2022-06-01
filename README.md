@@ -41,4 +41,4 @@ newColour.h = 69 // newColour is now {a: 1, h: 69, l: 53, s: 100}
 
 ###### [Sargent Coding Colours](https://github.com/sargent-coding/colours/) by [Sargent Coding](https://saco.ml) is licensed under [CC BY-ND 4.0](http://creativecommons.org/licenses/by-nd/4.0/)
 
-![image](https://user-images.githubusercontent.com/65425469/164231828-a7803d92-4b53-484f-8828-038b1af5bf6b.png)
+![CC BY-ND](https://licensebuttons.net/l/by-nd/4.0/88x31.png)
