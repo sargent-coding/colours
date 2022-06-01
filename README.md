@@ -20,7 +20,7 @@ new HEX("0x17f")
 ### Getting the CSS value of a colour
 Getting the CSS value of a colour is really easy because every colour has a value getter property.
 ```js
-new HSLA(214, 100, 53) // Returns hsla(214, 100, 53, 1)
+new HSLA(214, 100, 53).value // Returns hsla(214, 100, 53, 1)
 ```
 
 ### Converting colours
