@@ -39,7 +39,7 @@ class RGBA {
   }
   
   get value() {
-  	return `rgba(${this.r}, ${this.g}, ${this.b}, ${this.a || 1})`
+  	return `rgba(${this.r}, ${this.g}, ${this.b}${this.a == 1 ? "" : ", " + this.a})`
   }
 }
 
@@ -61,6 +61,6 @@ class HSLA {
   }
   
   get value() {
-  	return `hsla(${this.h}, ${this.s}, ${this.l}, ${this.a || 1})`
+  	return `hsla(${this.h}, ${this.s}%, ${this.l}%${this.a == 1 ? "" : ", " + this.a})`
   }
 }
